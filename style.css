@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+body, html {
+  height:  100vh;
+  background-color: black;
+  background-image: linear-gradient(130deg, rgba(28, 133, 253, 0.919), rgb(0, 175, 64));
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Relogio */
+.relogio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.671);
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* Configuracão geral dos ponteiros */
+.ponteiros {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  width: 5px;
+  height: 130px;
+  border-radius: 7px 7px 10px 10px;
+  transition: 1s;
+  transform-origin: bottom;
+  transform: translate(-50%);
+}
+
+/* Ponteiro de horas */
+.horas {
+  background-color: black;
+  height: 100px;
+  width: 8px;
+  z-index: 11;
+  transform: rotate(360deg);
+}
+
+/* Ponteiro de minutos */
+.minutos {
+  background-color: gray;
+  height: 120px;
+  width: 6px;
+  z-index: 10;
+  transform: rotate(360deg);
+}
+
+/* Ponteiro de secundos */
+.secundos {
+  background-color: red;
+  width: 4px;
+  z-index: 9;
+  transform: rotate(360deg);
+  transition: 0.5s;
+}
+
+/* Bola no centro do relogio */
+.horas::after {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  content: ".";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+}
+
+
+/* Posicionamento dos numeros */
+.numeros {
+  transform: translate(-50%, -50%);
+}
+.num1 {
+  position: absolute;
+  top: 10%;
+  left: 73%;
+}
+.num2 {
+  position: absolute;
+  top: 27%;
+  left: 90%;
+
+}
+.num3 {
+  position: absolute;
+  top: 50%;
+  left: 97%;
+}
+.num4 {
+  position: absolute;
+  top: 72%;
+  left: 90%;
+}
+.num5 {
+  position: absolute;
+  top: 90%;
+  left: 73%;
+}
+.num6 {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+}
+.num7 {
+  position: absolute;
+  top: 90%;
+  left: 28%;
+}
+.num8 {
+  position: absolute;
+  top: 72%;
+  left: 10%;
+
+}
+.num9 {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+
+}
+.num10 {
+  position: absolute;
+  top: 27%;
+  left: 11%;
+}
+.num11 {
+  position: absolute;
+  top: 10%;
+  left: 27%;
+}
+.num12 {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+}
+
+.relogio::after {
+  content: "Create by Winike Cuamba";
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: auto;
+  margin-top: 65vh;
+  margin-bottom: 20vh;
+  border-radius: 10px;
+}
+
